@@ -5,3 +5,4 @@ import quiz_results from '../data/quiz_results.json';
 import memory_results from '../data/quiz_results.json';
 
 import './storage';
+import './ranking';
