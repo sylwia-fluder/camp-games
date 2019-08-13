@@ -197,7 +197,7 @@ footer {
     background-color: rgb(250, 198, 226);
     -webkit-transform: scale(1.01);
 }
-.authors {
+.authors_box {
     margin: 8vh auto 12vh auto;
     max-width: 50%;
     display: flex;
@@ -235,5 +235,13 @@ footer {
 .author_box i {
     margin-bottom: 2vh;
     color: rgb(254, 162, 212);
+}
+
+.active{
+
+}
+
+.inactive{
+    display: none;
 }
 
