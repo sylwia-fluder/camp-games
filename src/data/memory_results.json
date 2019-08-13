@@ -1,0 +1,32 @@
+{
+  "results": [
+    {
+      "name": "player_A",
+      "score": 1
+    },
+    {
+      "name": "player_B",
+      "score": 3
+    },
+    {
+      "name": "player_C",
+      "score": 9
+    },
+    {
+      "name": "player_D",
+      "score": 2
+    },
+    {
+      "name": "player_E",
+      "score": 1
+    },
+    {
+      "name": "player_F",
+      "score": 3
+    },
+    {
+      "name": "player_G",
+      "score": 5
+    }
+  ]
+}

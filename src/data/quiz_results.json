@@ -1,0 +1,32 @@
+{
+  "results": [
+    {
+      "name": "player_1",
+      "score": 9
+    },
+    {
+      "name": "player_2",
+      "score": 8
+    },
+    {
+      "name": "player_3",
+      "score": 10
+    },
+    {
+      "name": "player_4",
+      "score": 1
+    },
+    {
+      "name": "player_5",
+      "score": 4
+    },
+    {
+      "name": "player_6",
+      "score": 2
+    },
+    {
+      "name": "player_7",
+      "score": 0
+    }
+  ]
+}
