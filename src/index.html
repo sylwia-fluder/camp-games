@@ -6,26 +6,34 @@
         <title>Camp Games</title>
         <meta name="description" content="Memory and Quiz Games">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/main.js"></script>
         <script src="https://kit.fontawesome.com/c3112e60d2.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <nav>
-            <ul class="menu"> 
-                <li><a href="#">Memory</a></li>
-                <li><a href="#">Quiz</a></li>
-                <li><a href="#">Authors</a></li>
-            </ul>
-        </nav>
-        <div class="active" id="memory">
-        <section class="memory_game_box">
-            <div class="memory_card"><i class="fas fa-brain fa-4x" id="memory_card_1"></i></div>
-            <div class="memory_card"><i class="fas fa-brain fa-4x" id="memory_card_2"></i></div>
-        </section>
-        <button class="play_button" type="button" id="button_start_memory">Play</button>
+        <div class="inactive active" id="memory">
+            <nav>
+                <ul class="menu"> 
+                    <li><a href="#" class="link" data-target="memory">Memory</a></li>
+                    <li><a href="#" class="link" data-target="quiz">Quiz</a></li>
+                    <li><a href="#" class="link" data-target="authors">Authors</a></li>
+                </ul>
+            </nav>
+            <section class="memory_game_box">
+                <div class="memory_card"><i class="fas fa-brain fa-4x" id="memory_card_1"></i></div>
+                <div class="memory_card"><i class="fas fa-brain fa-4x" id="memory_card_2"></i></div>
+            </section>
+            <button class="play_button" type="button" id="button_start_memory">Play</button>
         </div>
-        <div class="active inactive" id="quiz">
-        <section class="quiz_game_box">
+        <div class="inactive" id="quiz">
+            <nav>
+                <ul class="menu"> 
+                    <li><a href="#" class="link" data-target="memory">Memory</a></li>
+                    <li><a href="#" class="link" data-target="quiz">Quiz</a></li>
+                    <li><a href="#" class="link" data-target="authors">Authors</a></li>
+                </ul>
+            </nav>
+            <section class="quiz_game_box">
                 <div class="question" id="quiz_question">Question</div>
                 <div class="answer" id="quiz_answer_1">Answer 1</div>
                 <div class="answer" id="quiz_answer_2">Answer 2</div>
@@ -41,8 +49,15 @@
                 <div class="highscore" id="highscore_6">78 PTK</div>
             </section>
         </div>
-        <div class="active inactive" id="authors">
-            <section class="authors_box inactive">
+        <div class="inactive" id="authors">
+            <nav>
+                <ul class="menu"> 
+                    <li><a href="#" class="link" data-target="memory">Memory</a></li>
+                    <li><a href="#" class="link" data-target="quiz">Quiz</a></li>
+                    <li><a href="#" class="link" data-target="authors">Authors</a></li>
+                </ul>
+            </nav>
+            <section class="authors_box">
                     <div class="author_box">
                         <p>AUTHOR</p>
                         <i class="fas fa-user-circle fa-5x"></i>
