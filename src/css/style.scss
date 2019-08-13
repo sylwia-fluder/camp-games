@@ -9,6 +9,7 @@ body {
     background-image: url(../images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 nav {
@@ -237,11 +238,12 @@ footer {
     color: rgb(254, 162, 212);
 }
 
-.active{
-
-}
-
-.inactive{
+.inactive {
     display: none;
 }
+
+.active {
+   display: unset;
+}
+
 
