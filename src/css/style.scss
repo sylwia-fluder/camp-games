@@ -335,15 +335,17 @@ footer {
     .memory_game_box {
         max-width: 90%;
         max-height: 55%;
-        grid-gap: 1vh;
+        grid-gap: 0.5vh;
     } 
     .memory_card{
-        max-width: 80%;
-        max-height: 60%;
-        margin:auto;
+        min-width: 50%;
+        min-height: 50%;
+        max-width: 90%;
+        max-height: 90%;
+        margin: 0.5vh;
     }
     .memory_card i {
-        font-size: 2.5rem;
+        font-size: 2.6rem;
     }
     footer{
         position: fixed;
@@ -363,6 +365,7 @@ footer {
     .highscores_box{
         max-width: 70%;
         max-height: 70%;
+        margin-bottom: 10vh;
     }
     .highscore{
         min-width: 90%;
@@ -375,6 +378,52 @@ footer {
     }
 }
 
+@media (max-width: 414px) and (max-height:846px) {
+    .memory_game_box {
+        max-width: 90%;
+        max-height: 55%;
+        grid-gap: 0.5vh;
+    } 
+    .memory_card{
+        min-width: 50%;
+        min-height: 50%;
+        max-width: 90%;
+        max-height: 90%;
+        margin: 0.5vh;
+    }
+    .memory_card i {
+        font-size: 2.6rem;
+    }
+    footer{
+        position: fixed;
+        bottom: 0;
+    }
+    .quiz_game_box{
+        max-width: 90%;
+        max-height: 80%;
+    }
+    .menu {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: auto 2vh auto 2vh;
+    }
+    .highscores_box{
+        max-width: 70%;
+        max-height: 70%;
+        margin-bottom: 10vh;
+    }
+    .highscore{
+        min-width: 90%;
+        max-width: 95%;
+        max-height: 20%;
+        align-self: center;
+    }
+    .question{
+        background-position: 22vh;
+    }
+}
 
 
 
