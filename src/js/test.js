@@ -22,5 +22,3 @@ const card8 = new Card('image8');
 const cardArray = [card1, card2, card3, card4, card5, card6, card7, card8];
 
 const positions = ['mc-a1', 'mc-a2', 'mc-a3', 'mc-a4', 'mc-b1', 'mc-b2', 'mc-b3', 'mc-b4', 'mc-c1', 'mc-c2', 'mc-c3', 'mc-c4', 'mc-d1', 'mc-d2', 'mc-d3', 'mc-d4'];
-
-

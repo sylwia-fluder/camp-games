@@ -1,6 +1,6 @@
 const LOCAL_STORAGE_USERS_SCORE = {
-    QUIZ: 'quiz_score',
-    MEMORY: 'memory_score',
+  QUIZ: 'quiz_score',
+  MEMORY: 'memory_score',
 };
 
 const setUsersScoreForQuiz = (score) => localStorage.setItem(LOCAL_STORAGE_USERS_SCORE.QUIZ, score);
