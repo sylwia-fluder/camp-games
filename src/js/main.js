@@ -2,6 +2,7 @@ import '../css/style.scss';
 
 import quiz_results from '../data/quiz_results.json';
 import memory_results from '../data/quiz_results.json';
+import './test';
 
 import './storage';
 import './ranking';
