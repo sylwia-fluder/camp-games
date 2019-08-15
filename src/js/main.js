@@ -2,7 +2,7 @@ import '../css/style.scss';
 
 import quiz_results from '../data/quiz_results.json';
 import memory_results from '../data/quiz_results.json';
-// import './test';
+import './cardDrowing';
 
 import './storage';
 import './ranking';
@@ -43,3 +43,35 @@ const singlePageApplication = {
 };
 
 document.addEventListener('DOMContentLoaded', singlePageApplication.init);
+
+
+// quiz variables
+
+const playBtn = document.getElementById('button_start_quiz');
+const questionField = document.getElementById('quiz_question');
+const firstAnswerField = document.getElementById('quiz_answer_1');
+const secondAnswerField = document.getElementById('quiz_answer_2');
+const thirdAnswerField = document.getElementById('quiz_answer_3');
+
+// after click on play button
+
+const play = playBtn.addEventListener('click', () => {
+  playBtn.innerHTML = 'Next';
+  console.log(shuffledQuizData); // to test
+  question();
+});
+
+// getting out question and answers from table
+
+const question = () => {
+  const firstOfShuffledElements = shuffledQuizData.shift();
+  const activeQuestion = firstOfShuffledElements.question;
+  const activeAnswers = firstOfShuffledElements.answers;
+
+  questionField.innerHTML = activeQuestion;
+  firstAnswerField.innerHTML = activeAnswers[0].text;
+  secondAnswerField.innerHTML = activeAnswers[1].text;
+  thirdAnswerField.innerHTML = activeAnswers[2].text;
+
+  console.log(firstOfShuffledElements);
+};
