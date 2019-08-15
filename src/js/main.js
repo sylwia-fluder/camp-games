@@ -2,11 +2,13 @@ import '../css/style.scss';
 
 import quiz_results from '../data/quiz_results.json';
 import memory_results from '../data/quiz_results.json';
-import './test';
+// import './test';
 
 import './storage';
 import './ranking';
-import {shuffledQuizData} from './shuffledElements';
+import {
+  shuffledQuizData,
+} from './shuffledElements';
 
 // single page application function
 const singlePageApplication = {
@@ -31,8 +33,7 @@ const singlePageApplication = {
     history.pushState({}, activePage, `#${activePage}`);
     document.getElementById(activePage).dispatchEvent(singlePageApplication.show);
   },
-  pageShown(ev) {
-  },
+  pageShown(ev) {},
   poppin(ev) {
     const hash = location.hash.replace('#', '');
     document.querySelector('.active').classList.remove('active');
