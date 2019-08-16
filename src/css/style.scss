@@ -11,22 +11,6 @@ html{
 }
 
 body {
-<<<<<<< HEAD
-  background-color: rgb(254, 162, 212);
-  background-image: url(../images/background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-nav {
-  width: 100%;
-  background-color: rgba(254, 162, 212, 0.6);
-  min-height: 5vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-=======
     height: 100vh;
     background-color:rgb(254, 162, 212);
     background-image: url(../images/background.jpg);
@@ -43,7 +27,6 @@ nav {
     display:flex;
     justify-content: center;
     align-items: center;
->>>>>>> 50d28c2bb6a4db042af05e99c0c17c04d2ae8f9b
 }
 
 .menu {
@@ -70,18 +53,6 @@ nav {
 }
 
 .memory_game_box {
-<<<<<<< HEAD
-  width: 600px;
-  height: 600px;
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  margin: 5vh auto;
-  padding: 5px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-  display: grid;
-  grid-template-areas: "mc-a1 mc-a2 mc-a3 mc-a4" "mc-b1 mc-b2 mc-b3 mc-b4" "mc-c1 mc-c2 mc-c3 mc-c4" "mc-d1 mc-d2 mc-d3 mc-d4";
-  grid-gap: 5px;
-=======
     width: 70vh;
     height: 70vh;
     border-radius: 20px;
@@ -96,7 +67,6 @@ nav {
     "mc-c1 mc-c2 mc-c3 mc-c4"
     "mc-d1 mc-d2 mc-d3 mc-d4";
     grid-gap: 5px;
->>>>>>> 50d28c2bb6a4db042af05e99c0c17c04d2ae8f9b
 }
 
 .memory_card {
@@ -129,12 +99,8 @@ $letters: a, b, c, d;
 }
 
 .memory_card i {
-<<<<<<< HEAD
-  color: rgb(248, 135, 196);
-=======
     color: rgb(248, 135, 196);
 
->>>>>>> 50d28c2bb6a4db042af05e99c0c17c04d2ae8f9b
 }
 
 .play_button {
@@ -160,33 +126,6 @@ $letters: a, b, c, d;
 }
 
 footer {
-<<<<<<< HEAD
-  background-color: rgba(254, 162, 212, 0.6);
-  color: white;
-  font-family: "Roboto", sans-serif;
-  font-size: 10px;
-  min-height: 4vh;
-  margin-top: 5vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.quiz_game_box {
-  width: 600px;
-  height: 600px;
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  margin: 5vh auto;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: rgb(255, 255, 255);
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 18px;
-=======
     background-color:rgba(254, 162, 212,0.6);
     color: white;
     font-family: "Roboto", sans-serif;
@@ -216,7 +155,6 @@ footer {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 18px;
->>>>>>> 50d28c2bb6a4db042af05e99c0c17c04d2ae8f9b
 }
 
 .question {
@@ -250,42 +188,6 @@ footer {
 }
 
 .answer:hover {
-<<<<<<< HEAD
-  background-color: rgb(250, 198, 226);
-  -webkit-transform: scale(1.03);
-}
-
-.highscores_box {
-  margin: 5vh auto;
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
-  max-height: 30vh;
-  max-width: 50vh;
-  flex-wrap: wrap;
-}
-
-.highscore {
-  margin: 1.5vh;
-  min-width: 40%;
-  max-width: 45%;
-  min-height: 6vh;
-  max-height: 10vh;
-  background-color: rgb(254, 162, 212);
-  border-radius: 10px;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-  transition: 0.2s ease-in-out;
-=======
     background-color: rgb(250, 198, 226);
     -webkit-transform: scale(1.03);
 }
@@ -320,7 +222,6 @@ footer {
     align-items: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
     transition: 0.2s ease-in-out;
->>>>>>> 50d28c2bb6a4db042af05e99c0c17c04d2ae8f9b
 }
 
 .highscore:hover {
@@ -329,21 +230,12 @@ footer {
 }
 
 .authors_box {
-<<<<<<< HEAD
-  margin: 8vh auto 12vh auto;
-  max-width: 50%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-=======
     margin: 6vh auto 12vh auto;
     max-width: 50%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
->>>>>>> 50d28c2bb6a4db042af05e99c0c17c04d2ae8f9b
 }
 
 .author_box {
