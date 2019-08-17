@@ -6,9 +6,11 @@ import './cardDrowing';
 
 import './storage';
 import './ranking';
+import './quizValidation';
 import {
   shuffledQuizData,
 } from './shuffledElements';
+
 
 // single page application function
 const singlePageApplication = {
