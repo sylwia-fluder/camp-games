@@ -89,17 +89,68 @@ nav {
   background-color: rgb(255, 189, 225);
 }
 
-$letters: a,
-b,
-c,
-d;
+.mc-a1 {
+  grid-area: mc-a1;
+}
 
-@each $letter in $letters {
-  @for $i from 1 through length($letters) {
-    .mc-#{$letter}#{$i} {
-      grid-area: mc-#{$letter}#{$i};
-    }
-  }
+.mc-a2 {
+  grid-area: mc-a2;
+}
+
+.mc-a3 {
+  grid-area: mc-a3;
+}
+
+.mc-a4 {
+  grid-area: mc-a4;
+}
+
+.mc-b1 {
+  grid-area: mc-b1;
+}
+
+.mc-b2 {
+  grid-area: mc-b2;
+}
+
+.mc-b3 {
+  grid-area: mc-b3;
+}
+
+.mc-b4 {
+  grid-area: mc-b4;
+}
+
+.mc-c1 {
+  grid-area: mc-c1;
+}
+
+.mc-c2 {
+  grid-area: mc-c2;
+}
+
+.mc-c3 {
+  grid-area: mc-c3;
+}
+
+.mc-c4 {
+  grid-area: mc-c4;
+}
+
+.mc-d1 {
+  grid-area: mc-d1;
+}
+
+.mc-d2 {
+  grid-area: mc-d2;
+}
+
+.mc-d3 {
+  grid-area: mc-d3;
+}
+
+.mc-d4 {
+  grid-area: mc-d4;
 }
 
 .memory_card i {
