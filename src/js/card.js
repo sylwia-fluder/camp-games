@@ -5,3 +5,5 @@ class Card {
     this.position2 = position2;
   }
 }
+
+export default Card;
