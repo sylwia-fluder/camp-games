@@ -7,7 +7,7 @@ import './storage';
 import './ranking';
 import { shuffledQuizData } from './shuffledElements';
 import { domainToASCII } from 'url';
-import colorChange from './animations';
+import memoryGame from './memoryGame';
 
 // single page application function
 const singlePageApplication = {
@@ -44,25 +44,10 @@ const singlePageApplication = {
     document.getElementById(hash).dispatchEvent(singlePageApplication.show);
   },
   startGame() {
-    // eslint-disable-next-line no-use-before-define
     if (document.querySelector('.active').id === 'memory') {
       memoryGame.init();
-    } else {
-      quizGame.init();
     }
   },
 };
 
 document.addEventListener('DOMContentLoaded', singlePageApplication.init);
-
-const memoryGame = {
-  init() {
-    colorChange();
-  },
-};
-
-const quizGame = {
-  init() {
-    console.log('play quiz');
-  },
-};
