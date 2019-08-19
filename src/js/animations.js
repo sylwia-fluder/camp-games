@@ -1,11 +1,11 @@
 const colorChange = () => {
   document.querySelectorAll('.memory_card').forEach((element) => {
-    element.style.backgroundColor = 'rgb(255, 189, 225)';
+    element.classList.add('memory_card_animation');
   });
   setTimeout(() => {
     document.querySelectorAll('.memory_card').forEach((element) => {
-      element.style.backgroundColor = 'rgb(254, 162, 212)';
+      element.classList.remove('memory_card_animation');
     });
   }, 300);
 };
-export { colorChange };
+export default colorChange;

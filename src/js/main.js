@@ -7,7 +7,7 @@ import './storage';
 import './ranking';
 import { shuffledQuizData } from './shuffledElements';
 import { domainToASCII } from 'url';
-import { colorChange } from './animations';
+import colorChange from './animations';
 
 // single page application function
 const singlePageApplication = {
