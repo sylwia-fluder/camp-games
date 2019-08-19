@@ -117,5 +117,3 @@ playBtn.addEventListener('click', () => {
   playBtn.innerHTML = 'Next';
   quiz();
 })
-
-console.log(shuffledQuizData);
