@@ -240,9 +240,13 @@ footer {
   align-items: center;
   margin-top: 3vh;
   transition: 0.2s ease-in-out;
+
+  &.picked {
+    background-color: green;
+  }
 }
 
-.answer:hover {
+.answer:hover:not(.picked) {
   background-color: rgb(250, 198, 226);
   -webkit-transform: scale(1.03);
 }

@@ -44,3 +44,78 @@ const singlePageApplication = {
 };
 
 document.addEventListener('DOMContentLoaded', singlePageApplication.init);
+
+
+
+const playBtn = document.getElementById('button_start_quiz');
+const questionField = document.getElementById('quiz_question');
+const firstAnswerField = document.getElementById('quiz_answer_1');
+const secondAnswerField = document.getElementById('quiz_answer_2');
+const thirdAnswerField = document.getElementById('quiz_answer_3');
+
+let num = 0;
+const answers = [];
+
+// quiz function
+function quiz() {
+  const question = shuffledQuizData[num].question;
+  const answersArr = shuffledQuizData[num].answers;
+  const pickedAnswerNode = document.querySelector('.answer.picked');
+
+  questionField.innerHTML = question;
+  firstAnswerField.innerHTML = answersArr[0].text;
+  secondAnswerField.innerHTML = answersArr[1].text;
+  thirdAnswerField.innerHTML = answersArr[2].text;
+
+  if (!pickedAnswerNode)
+    return false;
+
+  const pickedAnswerObject = answersArr.find(answer => (
+    answer.text === pickedAnswerNode.textContent
+  ));
+
+  const answer = {
+    question,
+    answer: pickedAnswerObject.text,
+    correct: pickedAnswerObject.correct
+  };
+
+  answers.push(answer);
+  console.log(answers);
+
+  if (++num >= shuffledQuizData.length)
+    playBtn.textContent = 'Finish quiz';
+
+  resetAnswerButtons();
+}
+
+// listeners
+firstAnswerField.addEventListener('click', () => {
+  resetAnswerButtons();
+  firstAnswerField.classList.add('picked');
+});
+
+secondAnswerField.addEventListener('click', () => {
+  resetAnswerButtons();
+  secondAnswerField.classList.add('picked');
+});
+
+thirdAnswerField.addEventListener('click', () => {
+  resetAnswerButtons();
+  thirdAnswerField.classList.add('picked');
+});
+
+function resetAnswerButtons() {
+  const answerButtons = document.querySelectorAll('[id^="quiz_answer"]');
+  answerButtons.forEach(answerButton => answerButton.classList.remove('picked'));
+}
+
+playBtn.addEventListener('click', () => {
+  if (num >= shuffledQuizData.length)
+    return;
+
+  playBtn.innerHTML = 'Next';
+  quiz();
+})
+
+console.log(shuffledQuizData);
