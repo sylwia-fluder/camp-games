@@ -2,15 +2,12 @@ import '../css/style.scss';
 
 import quiz_results from '../data/quiz_results.json';
 import memory_results from '../data/quiz_results.json';
-<<<<<<< HEAD
-//import './test';
-=======
->>>>>>> master
 
 import './storage';
 import './ranking';
-import {shuffledQuizData} from './shuffledElements';
+import { shuffledQuizData } from './shuffledElements';
 import { domainToASCII } from 'url';
+import { colorChange } from './animations';
 
 // single page application function
 const singlePageApplication = {
@@ -26,8 +23,8 @@ const singlePageApplication = {
     });
     history.replaceState({}, 'Memory', '#memory');
     window.addEventListener('hashchange', singlePageApplication.poppin);
-    document.querySelectorAll('.play_button').forEach((button)=>{
-      button.addEventListener('click',singlePageApplication.startGame);
+    document.querySelectorAll('.play_button').forEach((button) => {
+      button.addEventListener('click', singlePageApplication.startGame);
     });
   },
   nav(event) {
@@ -46,22 +43,26 @@ const singlePageApplication = {
     document.getElementById(hash).classList.add('active');
     document.getElementById(hash).dispatchEvent(singlePageApplication.show);
   },
-  startGame(){
-    if('memory'==document.querySelector('.active').id){memoryGame.init()}
-    else{quizGame.init()};
+  startGame() {
+    // eslint-disable-next-line no-use-before-define
+    if (document.querySelector('.active').id === 'memory') {
+      memoryGame.init();
+    } else {
+      quizGame.init();
+    }
   },
 };
 
 document.addEventListener('DOMContentLoaded', singlePageApplication.init);
 
-const memoryGame={
-  init(){
-    console.log(`play memory`);
-    
-  }
+const memoryGame = {
+  init() {
+    colorChange();
+  },
 };
-const quizGame={
-  init(){
-    console.log(`play quiz`);
-  }
+
+const quizGame = {
+  init() {
+    console.log('play quiz');
+  },
 };
