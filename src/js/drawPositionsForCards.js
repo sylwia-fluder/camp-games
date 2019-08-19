@@ -1,9 +1,8 @@
-const drowCard = (cardArray, positions) => {
+const drawPositionsForCards = (cardArray, positions) => {
   const modifiedArray = cardArray.map((card) => {
     const position1 = positions[Math.floor(Math.random() * positions.length)];
-    positions.splice(positions.indexOf(position1), 1);
-
     const position2 = positions[Math.floor(Math.random() * positions.length)];
+    positions.splice(positions.indexOf(position1), 1);
     positions.splice(positions.indexOf(position2), 1);
     return {
       ...card,
@@ -14,4 +13,4 @@ const drowCard = (cardArray, positions) => {
   return modifiedArray;
 };
 
-export default drowCard;
+export default drawPositionsForCards;
