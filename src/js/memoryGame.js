@@ -1,8 +1,39 @@
 import colorChange from './animations';
+import drawPositionsForCards from './drawPositionsForCards';
+import drawImagesForCards from './drawImagesForCards';
+import CoordinatesOfCard from './coordinatesOfCard';
+import Verification from './verifyMemoryCard';
+
+const cardPositionArray = ['mc-a1', 'mc-a2', 'mc-a3', 'mc-a4', 'mc-b1', 'mc-b2', 'mc-b3', 'mc-b4', 'mc-c1', 'mc-c2', 'mc-c3', 'mc-c4', 'mc-d1', 'mc-d2', 'mc-d3', 'mc-d4'];
+const imagesArray = ['animal1', 'animal2', 'animal3', 'animal4', 'animal5', 'animal6', 'animal7', 'animal8', 'animal9', 'animal10', 'animal11', 'animal12', 'animal13', 'animal14'];
+let cardArray;
+const coordinateArray = [];
+let verify;
 
 const memoryGame = {
+  createArrayOfPosition() {
+    cardArray.forEach((card) => {
+      coordinateArray.push(new CoordinatesOfCard(card.position1, card.image, card));
+      coordinateArray.push(new CoordinatesOfCard(card.position2, card.image, card));
+    });
+  },
+  play() {
+    console.log(coordinateArray);
+    verify = new Verification(coordinateArray);
+    document.querySelectorAll('.memory_card').forEach((element) => {
+      element.addEventListener('click', verify.discoverCard);
+    });
+  },
   init() {
+    cardArray = drawImagesForCards(imagesArray, Array.from(document.querySelectorAll('.memory_card')));
+    console.log(cardArray);
+    cardArray = cardArray.slice(0, 8);
+    console.log(cardArray);
+    cardArray = drawPositionsForCards(cardArray, cardPositionArray);
+    console.log(cardArray);
+    this.createArrayOfPosition();
     colorChange();
+    this.play();
   },
 };
 
