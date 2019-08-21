@@ -88,7 +88,7 @@ function quiz() {
     answers.push(answer);
     answersCounter++;
 
-    const logicAndScore = (questionCounter = 0, answersCounter = 0) => {
+    const score = (questionCounter = 0, answersCounter = 0) => {
         const dataValidation = shuffledQuizData[questionCounter].answers[answersCounter].correct;
         if (dataValidation === true) {
             score++;
@@ -97,11 +97,13 @@ function quiz() {
     };
 
     const showScore = () => {
-        return alert(logicAndScore(num, answersCounter));
+        return alert(score(num, answersCounter));
     };
 
     if (++num >= shuffledQuizData.length) {
         playBtn.textContent = 'Finish quiz';
+        playBtn.style.fontSize = '0.8em';
+        playBtn.style.letterSpacing = '0.3em';
         playBtn.addEventListener('click', showScore);
     };
     resetAnswerButtons();
@@ -161,5 +163,3 @@ const playSnd = () => {
 }
 
 playSndBtn.addEventListener('click', playSnd);
-
-console.log(snd.src);
