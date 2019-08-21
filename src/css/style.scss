@@ -69,6 +69,19 @@ nav {
   grid-gap: 5px;
 }
 
+.endingMesssage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(254, 162, 212);
+}
+
+.endingMesssage * {
+  display:block;
+}
+
+
 .memory_card {
   width: 80%;
   height: 80%;
@@ -82,11 +95,14 @@ nav {
   transition: 0.2s ease-in-out;
 }
 
-
-
 .memory_card:hover {
   -webkit-transform: scale(1.05);
   background-color: rgb(255, 189, 225);
+}
+
+.memory_card_animation{
+    -webkit-transform: scale(1.05);
+    background-color: rgb(255, 189, 225);
 }
 
 .mc-a1 {

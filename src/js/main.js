@@ -9,6 +9,7 @@ import './quizValidation';
 import {
   shuffledQuizData,
 } from './shuffledElements';
+import MemoryGame from './memoryGame';
 
 
 // single page application function
@@ -25,6 +26,7 @@ const singlePageApplication = {
     });
     history.replaceState({}, 'Memory', '#memory');
     window.addEventListener('hashchange', singlePageApplication.poppin);
+    document.getElementById('button_start_memory').addEventListener('click', singlePageApplication.startGame);
   },
   nav(event) {
     event.preventDefault();
@@ -40,6 +42,10 @@ const singlePageApplication = {
     document.querySelector('.active').classList.remove('active');
     document.getElementById(hash).classList.add('active');
     document.getElementById(hash).dispatchEvent(singlePageApplication.show);
+  },
+  startGame() {
+    const game = new MemoryGame();
+    game.init();
   },
 };
 
