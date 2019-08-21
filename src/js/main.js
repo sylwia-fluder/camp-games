@@ -88,6 +88,8 @@ function quiz() {
     answers.push(answer);
     answersCounter++;
 
+    // Counting score
+
     const logicAndScore = (questionCounter = 0, answersCounter = 0) => {
         const dataValidation = shuffledQuizData[questionCounter].answers[answersCounter].correct;
         if (dataValidation === true) {
@@ -135,6 +137,8 @@ playBtn.addEventListener('click', () => {
     quiz();
 });
 
+// Play the sound
+
 const playSndBtn = document.getElementById('button_start_sound');
 const questionSnd = [];
 for (let i = 0; i < shuffledQuizData.length; i++) {
@@ -161,5 +165,3 @@ const playSnd = () => {
 }
 
 playSndBtn.addEventListener('click', playSnd);
-
-console.log(snd.src);
