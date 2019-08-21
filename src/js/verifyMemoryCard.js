@@ -1,3 +1,5 @@
+import colorChange from './animations';
+
 function Verification(coordinateArray) {
   this.arrayOfDiscoverCard = [];
   this.arrayOfDiscoverCardDOM = [];
@@ -8,6 +10,10 @@ function Verification(coordinateArray) {
   this.getCoordinateArray = () => this.coordinateArray;
 
   this.end = () => {
+    colorChange();
+    setTimeout((clickCounter) => {
+      document.querySelector('.memory_game_box').innerHTML = `<h2>Gratulacje</h2><p>Ukończyłeś grę z wynikiem ${clickCounter} kliknięć</p>`;
+    }, 1000, this.clickCounter);
   };
 
   this.correctCheck = () => this.arrayOfDiscoverCard[0].image === this.arrayOfDiscoverCard[1].image;

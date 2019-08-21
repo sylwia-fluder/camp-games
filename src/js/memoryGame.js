@@ -19,13 +19,13 @@ function MemoryGame() {
     });
   };
   this.play = () => {
-    console.log(coordinateArray);
     verify = new Verification(coordinateArray);
     document.querySelectorAll('.memory_card').forEach((element) => {
       element.addEventListener('click', verify.discoverCard);
     });
   };
   this.init = () => {
+    document.getElementById('button_start_memory').classList.add('inactive');
     cardArray = drawImagesForCards(imagesArray.slice(), Array.from(document.querySelectorAll('.memory_card')));
     cardArray = cardArray.slice(0, 8);
     cardArray = drawPositionsForCards(cardArray, cardPositionArray.slice());

@@ -5,17 +5,12 @@ import memory_results from '../data/quiz_results.json';
 
 import './storage';
 import './ranking';
-<<<<<<< HEAD
-import { shuffledQuizData } from './shuffledElements';
-import { domainToASCII } from 'url';
-import MemoryGame from './memoryGame';
-=======
 import './quizValidation';
 import {
   shuffledQuizData,
 } from './shuffledElements';
+import MemoryGame from './memoryGame';
 
->>>>>>> master
 
 // single page application function
 const singlePageApplication = {
