@@ -41,16 +41,12 @@ const singlePageApplication = {
         document.getElementById(hash).dispatchEvent(singlePageApplication.show);
     },
 };
-
 document.addEventListener('DOMContentLoaded', singlePageApplication.init);
-
-
 const playBtn = document.getElementById('button_start_quiz');
 const questionField = document.getElementById('quiz_question');
 const firstAnswerField = document.getElementById('quiz_answer_1');
 const secondAnswerField = document.getElementById('quiz_answer_2');
 const thirdAnswerField = document.getElementById('quiz_answer_3');
-
 let num = 0;
 let score = 0;
 const answers = [];
@@ -65,16 +61,13 @@ function quiz() {
     const question = shuffledQuizData[num].question;
     const answersArr = shuffledQuizData[num].answers;
     const pickedAnswerNode = document.querySelector('.answer.picked');
-
     questionField.innerHTML = question;
     firstAnswerField.innerHTML = answersArr[0].text;
     secondAnswerField.innerHTML = answersArr[1].text;
     thirdAnswerField.innerHTML = answersArr[2].text;
-
     if (!pickedAnswerNode) {
         return false;
     }
-
     const pickedAnswerObject = answersArr.find((answer) => (
         answer.text === pickedAnswerNode.textContent
     ));
@@ -93,6 +86,7 @@ function quiz() {
     const logicAndScore = (questionCounter = 0, answersCounter = 0) => {
         const dataValidation = shuffledQuizData[questionCounter].answers[answersCounter].correct;
         if (dataValidation === true) {
+
             score++;
         }
         return score;
