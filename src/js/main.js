@@ -7,7 +7,7 @@ import './storage';
 import './ranking';
 import { shuffledQuizData } from './shuffledElements';
 import { domainToASCII } from 'url';
-import memoryGame from './memoryGame';
+import MemoryGame from './memoryGame';
 
 // single page application function
 const singlePageApplication = {
@@ -42,7 +42,8 @@ const singlePageApplication = {
     document.getElementById(hash).dispatchEvent(singlePageApplication.show);
   },
   startGame() {
-    memoryGame.init();
+    const game = new MemoryGame();
+    game.init();
   },
 };
 
