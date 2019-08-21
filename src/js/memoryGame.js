@@ -8,7 +8,6 @@ import imagesData from './imagesData';
 
 function MemoryGame() {
   const cardPositionArray = ['mc-a1', 'mc-a2', 'mc-a3', 'mc-a4', 'mc-b1', 'mc-b2', 'mc-b3', 'mc-b4', 'mc-c1', 'mc-c2', 'mc-c3', 'mc-c4', 'mc-d1', 'mc-d2', 'mc-d3', 'mc-d4'];
-  // const imagesArray = ['animal1', 'animal2', 'animal3', 'animal4', 'animal5', 'animal6', 'animal7', 'animal8', 'animal9', 'animal10', 'animal11', 'animal12', 'animal13', 'animal14'];
   const imagesArray = imagesData;
   let cardArray;
   const coordinateArray = [];
