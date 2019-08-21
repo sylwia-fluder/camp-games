@@ -23,9 +23,7 @@ const singlePageApplication = {
     });
     history.replaceState({}, 'Memory', '#memory');
     window.addEventListener('hashchange', singlePageApplication.poppin);
-    document.querySelectorAll('.play_button').forEach((button) => {
-      button.addEventListener('click', singlePageApplication.startGame);
-    });
+    document.getElementById('button_start_memory').addEventListener('click', singlePageApplication.startGame);
   },
   nav(event) {
     event.preventDefault();
@@ -44,9 +42,7 @@ const singlePageApplication = {
     document.getElementById(hash).dispatchEvent(singlePageApplication.show);
   },
   startGame() {
-    if (document.querySelector('.active').id === 'memory') {
-      memoryGame.init();
-    }
+    memoryGame.init();
   },
 };
 

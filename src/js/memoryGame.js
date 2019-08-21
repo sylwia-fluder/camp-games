@@ -25,12 +25,9 @@ const memoryGame = {
     });
   },
   init() {
-    cardArray = drawImagesForCards(imagesArray, Array.from(document.querySelectorAll('.memory_card')));
-    console.log(cardArray);
+    cardArray = drawImagesForCards(imagesArray.slice(), Array.from(document.querySelectorAll('.memory_card')));
     cardArray = cardArray.slice(0, 8);
-    console.log(cardArray);
-    cardArray = drawPositionsForCards(cardArray, cardPositionArray);
-    console.log(cardArray);
+    cardArray = drawPositionsForCards(cardArray, cardPositionArray.slice());
     this.createArrayOfPosition();
     colorChange();
     this.play();
