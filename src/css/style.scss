@@ -69,6 +69,19 @@ nav {
   grid-gap: 5px;
 }
 
+.endingMesssage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(254, 162, 212);
+}
+
+.endingMesssage * {
+  display:block;
+}
+
+
 .memory_card {
   width: 80%;
   height: 80%;

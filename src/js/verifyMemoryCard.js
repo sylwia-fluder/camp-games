@@ -12,6 +12,7 @@ function Verification(coordinateArray) {
   this.end = () => {
     colorChange();
     setTimeout((clickCounter) => {
+      document.querySelector('.memory_game_box').classList.add('endingMesssage');
       document.querySelector('.memory_game_box').innerHTML = `<h2>Gratulacje</h2><p>Ukończyłeś grę z wynikiem ${clickCounter} kliknięć</p>`;
     }, 1000, this.clickCounter);
   };
@@ -22,7 +23,9 @@ function Verification(coordinateArray) {
     this.clickCounter += 1;
     const cardDOM = event.currentTarget;
     const card = this.coordinateArray.find((coordinate) => coordinate.position === cardDOM.classList[1]);
-    cardDOM.innerHTML = ` <img src="../images/animals/${card.image}.png" alt="${card.image}" height="100%"> `;
+    cardDOM.querySelector('i').style.visibility = 'hidden';
+    cardDOM.style.background = `${card.image.adres}`;
+    cardDOM.style.backgroundSize = '100% 100%';
     this.arrayOfDiscoverCardDOM.push(cardDOM);
     this.arrayOfDiscoverCard.push(card);
     if (this.arrayOfDiscoverCard.length === this.counter) {
@@ -40,8 +43,10 @@ function Verification(coordinateArray) {
         }
       } else {
         setTimeout((dom) => {
-          dom[0].innerHTML = '<i class="fas fa-brain fa-4x"></i>';
-          dom[1].innerHTML = '<i class="fas fa-brain fa-4x"></i>';
+          dom[0].querySelector('i').style.visibility = 'visible';
+          dom[0].style.background = ' rgb(254, 162, 212)';
+          dom[1].querySelector('i').style.visibility = 'visible';
+          dom[1].style.background = ' rgb(254, 162, 212)';
         }, 1000, [this.arrayOfDiscoverCardDOM[0], this.arrayOfDiscoverCardDOM[1]]);
       }
       this.arrayOfDiscoverCard.length = 0;
